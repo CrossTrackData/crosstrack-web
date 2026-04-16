@@ -1,0 +1,16 @@
+{
+  "name": "@crosstrack/sdk-web",
+  "version": "0.1.0",
+  "description": "CrossTrack Web SDK — cross-platform identity resolution",
+  "main": "dist/crosstrack.js",
+  "types": "dist/crosstrack.d.ts",
+  "scripts": {
+    "build": "esbuild src/crosstrack.ts --bundle --minify --sourcemap --format=iife --global-name=CrossTrack --outfile=dist/crosstrack.js",
+    "build:dev": "esbuild src/crosstrack.ts --bundle --sourcemap --format=iife --global-name=CrossTrack --outfile=dist/crosstrack.js",
+    "test": "node --test test/*.test.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.0",
+    "typescript": "^5.3.0"
+  }
+}
